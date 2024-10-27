@@ -1015,6 +1015,7 @@ icon_4.Parent = scripts
 
 local uistroke_5 = Instance.new("UIStroke")
 uistroke_5.Color = Color3.new(1, 1, 1)
+uistroke_5.Transparency = 1
 uistroke_5.Thickness = 1.2000000476837158
 uistroke_5.Parent = scripts
 
