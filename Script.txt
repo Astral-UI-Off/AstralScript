@@ -1146,6 +1146,6 @@ task.spawn(function()
 	end)
 
 	gamedetection.Interact.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hugodubois1/ToolNukee/refs/heads/main/AstralGameDetectProtect.txt"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralSystem/refs/heads/main/AstralGameDetectProtect.txt"))()
 	end)
 end)
