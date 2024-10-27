@@ -460,6 +460,9 @@ image_button_2.Position = UDim2.new(0.0444444455, 0, 0.0444444455, 0)
 image_button_2.Size = UDim2.new(0, 40, 0, 40)
 image_button_2.Visible = true
 image_button_2.Parent = frame_2
+image_button_2.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/AdminDetect"))()
+end)
 
 local uilist_layout_2 = Instance.new("UIListLayout")
 uilist_layout_2.Padding = UDim.new(0, 6)
