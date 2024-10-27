@@ -1,0 +1,361 @@
+--// Instances
+
+local astraladmin_detect = Instance.new("ScreenGui")
+astraladmin_detect.IgnoreGuiInset = false
+astraladmin_detect.ResetOnSpawn = true
+astraladmin_detect.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+astraladmin_detect.Name = "Astral AdminDetect"
+astraladmin_detect.Parent = game:GetService("CoreGui")
+
+local moderateur_detect = Instance.new("Frame")
+moderateur_detect.AnchorPoint = Vector2.new(0.5, 0.5)
+moderateur_detect.BackgroundColor3 = Color3.new(1, 1, 1)
+moderateur_detect.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+moderateur_detect.Position = UDim2.new(0.88461715, 0, 0.858118057, 0)
+moderateur_detect.Size = UDim2.new(0, 300, 0, 186)
+moderateur_detect.Visible = false
+moderateur_detect.Name = "ModerateurDetect"
+moderateur_detect.Parent = astraladmin_detect
+
+local subtitle = Instance.new("TextLabel")
+subtitle.Font = Enum.Font.Unknown
+subtitle.Text = "Un moderateur vient de se connecter."
+subtitle.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+subtitle.TextScaled = true
+subtitle.TextSize = 14
+subtitle.TextWrapped = true
+subtitle.TextXAlignment = Enum.TextXAlignment.Left
+subtitle.BackgroundColor3 = Color3.new(1, 1, 1)
+subtitle.BackgroundTransparency = 1
+subtitle.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+subtitle.Position = UDim2.new(0.0596667491, 0, 0.183494657, 0)
+subtitle.Size = UDim2.new(0, 214, 0, 30)
+subtitle.Visible = true
+subtitle.Name = "Subtitle"
+subtitle.Parent = moderateur_detect
+
+local uigradient = Instance.new("UIGradient")
+uigradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0, 0, 0)), ColorSequenceKeypoint.new(1, Color3.new(0.705882, 0, 0.341176))})
+uigradient.Offset = Vector2.new(0, 0.6000000238418579)
+uigradient.Rotation = 80
+uigradient.Parent = moderateur_detect
+
+local title = Instance.new("TextLabel")
+title.Font = Enum.Font.Unknown
+title.Text = "Moderateur Detection"
+title.TextColor3 = Color3.new(0.941176, 0.941176, 0.941176)
+title.TextScaled = true
+title.TextSize = 14
+title.TextWrapped = true
+title.TextXAlignment = Enum.TextXAlignment.Left
+title.BackgroundColor3 = Color3.new(1, 1, 1)
+title.BackgroundTransparency = 1
+title.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+title.Position = UDim2.new(0.0599999987, 0, 0.0904946253, 0)
+title.Size = UDim2.new(0, 233, 0, 16)
+title.Visible = true
+title.Name = "Title"
+title.Parent = moderateur_detect
+
+local uicorner = Instance.new("UICorner")
+uicorner.CornerRadius = UDim.new(0, 13)
+uicorner.Parent = moderateur_detect
+
+local avatar = Instance.new("ImageLabel")
+avatar.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+avatar.BackgroundTransparency = 0.699999988079071
+avatar.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+avatar.Position = UDim2.new(0.0572499596, 0, 0.433306307, 0)
+avatar.Size = UDim2.new(0, 42, 0, 42)
+avatar.Visible = true
+avatar.Name = "Avatar"
+avatar.Parent = moderateur_detect
+
+local uicorner_2 = Instance.new("UICorner")
+uicorner_2.CornerRadius = UDim.new(1, 0)
+uicorner_2.Parent = avatar
+
+local admin_name = Instance.new("TextLabel")
+admin_name.Font = Enum.Font.Unknown
+admin_name.Text = "N/A"
+admin_name.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+admin_name.TextScaled = true
+admin_name.TextSize = 14
+admin_name.TextWrapped = true
+admin_name.TextXAlignment = Enum.TextXAlignment.Left
+admin_name.BackgroundColor3 = Color3.new(1, 1, 1)
+admin_name.BackgroundTransparency = 1
+admin_name.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+admin_name.Position = UDim2.new(0.222666666, 0, 0.463870943, 0)
+admin_name.Size = UDim2.new(0, 199, 0, 16)
+admin_name.Visible = true
+admin_name.Name = "AdminName"
+admin_name.Parent = moderateur_detect
+
+local close = Instance.new("ImageButton")
+close.Image = "rbxassetid://3926305904"
+close.ImageRectOffset = Vector2.new(924, 724)
+close.ImageRectSize = Vector2.new(36, 36)
+close.ImageTransparency = 0.6000000238418579
+close.AnchorPoint = Vector2.new(1, 0)
+close.BackgroundTransparency = 1
+close.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(1, -15, 0, 15)
+close.Size = UDim2.new(0, 18, 0, 18)
+close.Visible = true
+close.ZIndex = 2
+close.Name = "Close"
+close.Parent = moderateur_detect
+
+local quitter = Instance.new("Frame")
+quitter.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+quitter.BackgroundTransparency = 0.699999988079071
+quitter.BorderSizePixel = 0
+quitter.Position = UDim2.new(0.610755622, 0, 0.747686088, 0)
+quitter.Size = UDim2.new(0, 107, 0, 32)
+quitter.Visible = true
+quitter.Name = "Quitter"
+quitter.Parent = moderateur_detect
+
+local uicorner_3 = Instance.new("UICorner")
+uicorner_3.CornerRadius = UDim.new(1, 0)
+uicorner_3.Parent = quitter
+
+local titre = Instance.new("TextLabel")
+titre.Font = Enum.Font.Unknown
+titre.Text = "Quitter"
+titre.TextColor3 = Color3.new(1, 1, 1)
+titre.TextScaled = true
+titre.TextSize = 14
+titre.TextWrapped = true
+titre.TextXAlignment = Enum.TextXAlignment.Left
+titre.BackgroundColor3 = Color3.new(1, 1, 1)
+titre.BackgroundTransparency = 1
+titre.BorderColor3 = Color3.new(0, 0, 0)
+titre.BorderSizePixel = 0
+titre.Position = UDim2.new(0.262038767, 0, 0.245454729, 0)
+titre.Size = UDim2.new(0, 56, 0, 16)
+titre.Visible = true
+titre.Name = "Titre"
+titre.Parent = quitter
+
+local button = Instance.new("TextButton")
+button.Font = Enum.Font.SourceSans
+button.Text = ""
+button.TextColor3 = Color3.new(0, 0, 0)
+button.TextSize = 14
+button.BackgroundColor3 = Color3.new(1, 1, 1)
+button.BackgroundTransparency = 1
+button.BorderColor3 = Color3.new(0, 0, 0)
+button.BorderSizePixel = 0
+button.Position = UDim2.new(0, 0, -9.24775122e-07, 0)
+button.Size = UDim2.new(0, 107, 0, 32)
+button.Visible = true
+button.Name = "Button"
+button.Parent = quitter
+
+local server_hop = Instance.new("Frame")
+server_hop.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+server_hop.BackgroundTransparency = 0.699999988079071
+server_hop.BorderSizePixel = 0
+server_hop.Position = UDim2.new(0.168550625, 0, 0.747686088, 0)
+server_hop.Size = UDim2.new(0, 121, 0, 33)
+server_hop.Visible = true
+server_hop.Name = "ServerHop"
+server_hop.Parent = moderateur_detect
+
+local uicorner_4 = Instance.new("UICorner")
+uicorner_4.CornerRadius = UDim.new(1, 0)
+uicorner_4.Parent = server_hop
+
+local titre_2 = Instance.new("TextLabel")
+titre_2.Font = Enum.Font.Unknown
+titre_2.Text = "ServeurHop"
+titre_2.TextColor3 = Color3.new(1, 1, 1)
+titre_2.TextScaled = true
+titre_2.TextSize = 14
+titre_2.TextWrapped = true
+titre_2.TextXAlignment = Enum.TextXAlignment.Left
+titre_2.BackgroundColor3 = Color3.new(1, 1, 1)
+titre_2.BackgroundTransparency = 1
+titre_2.BorderColor3 = Color3.new(0, 0, 0)
+titre_2.BorderSizePixel = 0
+titre_2.Position = UDim2.new(0.129807144, 0, 0.245454729, 0)
+titre_2.Size = UDim2.new(0, 89, 0, 16)
+titre_2.Visible = true
+titre_2.Name = "Titre"
+titre_2.Parent = server_hop
+
+local button_2 = Instance.new("TextButton")
+button_2.Font = Enum.Font.SourceSans
+button_2.Text = ""
+button_2.TextColor3 = Color3.new(0, 0, 0)
+button_2.TextSize = 14
+button_2.BackgroundColor3 = Color3.new(1, 1, 1)
+button_2.BackgroundTransparency = 1
+button_2.BorderColor3 = Color3.new(0, 0, 0)
+button_2.BorderSizePixel = 0
+button_2.Position = UDim2.new(0, 0, -9.24775122e-07, 0)
+button_2.Size = UDim2.new(0, 107, 0, 32)
+button_2.Visible = true
+button_2.Name = "Button"
+button_2.Parent = server_hop
+
+local scritp_admin = Instance.new("LocalScript")
+scritp_admin.Name = "ScritpAdmin"
+scritp_admin.Parent = astraladmin_detect
+
+local princi = Instance.new("Frame")
+princi.BackgroundColor3 = Color3.new(1, 1, 1)
+princi.BackgroundTransparency = 1
+princi.BorderColor3 = Color3.new(0, 0, 0)
+princi.BorderSizePixel = 0
+princi.Position = UDim2.new(0.79668051, 0, 0.0288462117, 0)
+princi.Size = UDim2.new(0, 336, 0, 962)
+princi.Visible = true
+princi.Name = "Princi"
+princi.Parent = astraladmin_detect
+
+local scroll = Instance.new("ScrollingFrame")
+scroll.BottomImage = ""
+scroll.MidImage = ""
+scroll.ScrollBarImageColor3 = Color3.new(0, 0, 0)
+scroll.ScrollBarThickness = 1
+scroll.TopImage = ""
+scroll.Active = true
+scroll.BackgroundColor3 = Color3.new(1, 1, 1)
+scroll.BackgroundTransparency = 1
+scroll.BorderColor3 = Color3.new(0, 0, 0)
+scroll.BorderSizePixel = 0
+scroll.Size = UDim2.new(0, 336, 0, 962)
+scroll.Visible = true
+scroll.Name = "Scroll"
+scroll.Parent = princi
+
+local uilist_layout = Instance.new("UIListLayout")
+uilist_layout.Padding = UDim.new(0, 10)
+uilist_layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+uilist_layout.SortOrder = Enum.SortOrder.LayoutOrder
+uilist_layout.Parent = scroll
+
+--//Modules
+
+local modules = {}
+
+--// Scripts
+
+-- ScritpAdmin
+task.spawn(function()
+	local script = scritp_admin
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	local Players = game:GetService("Players")
+	local httpService = game:GetService("HttpService")
+	local teleportService = game:GetService("TeleportService")
+	local coreGui = game:GetService("CoreGui")
+
+	local frame = script.Parent.ModerateurDetect
+
+	local placeId = game.PlaceId
+	local jobId = game.JobId
+
+	local groupId
+
+	if game.GameId == 3561732736 then
+		groupId = 16720859
+	else
+		groupId = game.CreatorId
+	end
+
+	local ignoredRoles = {
+		["Membre"] = true,
+		["Contributeur"] = true,
+		["👥・Toulousains"] = true,
+		["Member"] = true,
+		["Guest"] = true,
+		["[🌐] Membre"] = true,
+		["[✅] Whitelist"] = true,
+		["[💠] Vérifié"] = true
+	}
+
+	local function serverhop()
+		local highestPlayers = 0
+		local servers = {}
+
+		for _, v in ipairs(httpService:JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. placeId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+			if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= jobId then
+				if v.playing > highestPlayers then
+					highestPlayers = v.playing
+					servers[1] = v.id
+				end
+			end
+		end
+
+		if #servers > 0 then
+			teleportService:TeleportToPlaceInstance(placeId, servers[1])
+		else
+			print("Aucun serveur disponible pour le changement.")
+		end
+	end
+
+	local function cloneframe(player)
+		local newFrame = frame:Clone()
+		newFrame.Parent = script.Parent.Princi.Scroll
+		newFrame.Visible = true
+		newFrame.Name = player.Name
+		newFrame.AdminName.Text = player.Name
+		newFrame.Avatar.Image = Players:GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+
+		newFrame.Close.MouseButton1Click:Connect(function()
+			newFrame:Destroy()
+		end)
+		newFrame.ServerHop.Button.MouseButton1Click:Connect(function()
+			serverhop()
+		end)
+		newFrame.Quitter.Button.MouseButton1Click:Connect(function()
+			Players.LocalPlayer:Kick("Vous avez décidé de quitter le jeu.")
+		end)
+	end
+
+	local function printPlayerRole(player)
+		if not player or not player:IsA("Player") then
+			return
+		end
+
+		if not groupId then
+			return
+		end
+
+		if not player:IsInGroup(groupId) then
+			return
+		end
+
+		local playerRole = player:GetRoleInGroup(groupId)
+
+		if playerRole and playerRole ~= "" then
+			if not ignoredRoles[playerRole] then
+				cloneframe(player)
+			end
+		end
+	end
+
+	local function checkAllPlayers()
+		for _, player in ipairs(Players:GetPlayers()) do
+			printPlayerRole(player)
+		end
+	end
+
+	game.Players.PlayerAdded:Connect(function(player)
+		printPlayerRole(player)
+	end)
+
+	checkAllPlayers()
+end)
