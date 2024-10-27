@@ -18,7 +18,7 @@ moderateur_detect.Name = "ModerateurDetect"
 moderateur_detect.Parent = astraladmin_detect
 
 local subtitle = Instance.new("TextLabel")
-subtitle.Font = Enum.Font.Unknown
+subtitle.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
 subtitle.Text = "Un moderateur vient de se connecter."
 subtitle.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
 subtitle.TextScaled = true
@@ -41,7 +41,7 @@ uigradient.Rotation = 80
 uigradient.Parent = moderateur_detect
 
 local title = Instance.new("TextLabel")
-title.Font = Enum.Font.Unknown
+title.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
 title.Text = "Moderateur Detection"
 title.TextColor3 = Color3.new(0.941176, 0.941176, 0.941176)
 title.TextScaled = true
@@ -76,7 +76,7 @@ uicorner_2.CornerRadius = UDim.new(1, 0)
 uicorner_2.Parent = avatar
 
 local admin_name = Instance.new("TextLabel")
-admin_name.Font = Enum.Font.Unknown
+admin_name.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 admin_name.Text = "N/A"
 admin_name.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
 admin_name.TextScaled = true
@@ -123,7 +123,7 @@ uicorner_3.CornerRadius = UDim.new(1, 0)
 uicorner_3.Parent = quitter
 
 local titre = Instance.new("TextLabel")
-titre.Font = Enum.Font.Unknown
+titre.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 titre.Text = "Quitter"
 titre.TextColor3 = Color3.new(1, 1, 1)
 titre.TextScaled = true
@@ -170,7 +170,7 @@ uicorner_4.CornerRadius = UDim.new(1, 0)
 uicorner_4.Parent = server_hop
 
 local titre_2 = Instance.new("TextLabel")
-titre_2.Font = Enum.Font.Unknown
+titre_2.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 titre_2.Text = "ServeurHop"
 titre_2.TextColor3 = Color3.new(1, 1, 1)
 titre_2.TextScaled = true
